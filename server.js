@@ -8,7 +8,7 @@ app.get("/say", async (req, res) => {
 	const keyword = req.query.keyword || "";
 	const response = await axios.get(
 		`https://9m3rc54lzj.execute-api.us-east-2.amazonaws.com/say`,
-		{ params: { keyword } } // sends ?keyword=<keyword>
+		{ params: { keyword } }
 	);
 	res.json(response.data);
 });
